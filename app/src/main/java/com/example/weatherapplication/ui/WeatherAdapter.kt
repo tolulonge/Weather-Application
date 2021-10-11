@@ -26,7 +26,7 @@ class WeatherAdapter(
                     R.string.city_latitude,
                     city.coord.lat.toString()
                 )
-                txtLatitude.text = txtLatitude.resources.getString(
+                txtLongitude.text = txtLatitude.resources.getString(
                     R.string.city_longitude,
                     city.coord.lon.toString()
                 )
