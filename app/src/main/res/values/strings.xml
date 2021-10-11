@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Weather Application</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="city_detail_fragment_label">City Detail Fragment</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="city_weather">City Weather</string>
+    <string name="city_name">city_name</string>
+    <string name="city_image">city_image</string>
+    <string name="city_detail_transition_name">cityImage</string>
+    <string name="default_city_name_placeholder">Baghdad</string>
+    <string name="city_latitude">Latitude: %1$s</string>
+    <string name="city_longitude">Longitude: %1$s</string>
+</resources>

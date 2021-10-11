@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#FFEB3B</color>
+    <color name="primaryLightColor">#E8D849</color>
+    <color name="primaryDarkColor">#83770C</color>
+    <color name="secondaryColor">#90a4ae</color>
+    <color name="secondaryLightColor">#c1d5e0</color>
+    <color name="secondaryDarkColor">#62757f</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+
+
+    <color name="green">#81AA84</color>
+    <color name="green_dark">#5B755B</color>
+    <color name="green_light">#A5D6A7</color>
+    <color name="blue">#0288D1</color>
+    <color name="blue_dark">#005B9F</color>
+    <color name="blue_light">#81D4FA</color>
+    <color name="good_afternoon">#2C492C</color>
+
+    <color name="good_morning">#B1A31B</color>
+
+    <color name="brown">#ED4713</color>
+    <color name="brown_dark">#832B10</color>
+    <color name="brown_light">#E47755</color>
+    <color name="pink">#E8457C</color>
+    <color name="pink_dark">#B32152</color>
+    <color name="pink_light">#DF5E8A</color>
+
+    <color name="good_evening">#972149</color>
+
+
+    <color name="black_dark">#121211</color>
+    <color name="black_light">#393838</color>
+    <color name="blue_night">#0B1445</color>
+    <color name="blue_night_dark">#131D57</color>
+    <color name="blue_night_light">#921C2973</color>
+
+    <color name="good_night">#141F5E</color>
+
+</resources>
