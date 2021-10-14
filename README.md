@@ -1,6 +1,9 @@
 # Weather-Application
 A mobile application that uses OpenWeatherApi to get weather details of specific cities
 
+It employs the single activity rule with two fragments:
+One of the fragments holds the list of the cities and the other displays the details of a clicked city
+
 Features:
 - MVVM Architecture
 - Repository Pattern

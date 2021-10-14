@@ -15,10 +15,16 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
+/**
+ * This is the dependency injection module that helps handle every dependency required within the
+ * application. It provides the retrofit used to make the network call, the api key required by
+ * open weather and the repository that serves as a middle man between the network calls and viewModel
+ */
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    // Provides retrofit service
     @Singleton
     @Provides
     fun provideApiServiceEndPoint(): OpenWeatherEndpoint {
@@ -41,6 +47,7 @@ object AppModule {
     fun provideApiKey() : String = API_KEY
 
 
+    // Provides Repository
     @Singleton
     @Provides
     fun provideCityRepository(openWeatherEndpoint: OpenWeatherEndpoint, apiKey : String): CityRepository{

@@ -15,7 +15,7 @@ import com.example.weatherapplication.utils.load
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
- * A simple [Fragment] subclass as the second destination in the navigation.
+ * This fragment class holds the views for displaying a single particular city
  */
 @AndroidEntryPoint
 class CityDetailFragment : Fragment() {
@@ -37,7 +37,10 @@ class CityDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Retrieves the args from navigation
         val city = args.city
+
+        // Loads the image of the city into the image view
         binding.cityImageVIew.apply {
            load(city.image)
         }

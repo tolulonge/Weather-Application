@@ -3,6 +3,9 @@ package com.example.weatherapplication.model.data
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
+/**
+ * These are the model classes coming from the api response
+ */
 @Parcelize
 data class City(
     val base: String,

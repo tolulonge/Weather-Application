@@ -23,17 +23,22 @@ class MainActivity : AppCompatActivity() {
         setTheme(getApplicationTheme())
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        // Sets background color of the application depending on the time of the day
         binding.mainView.setBackgroundColor(resources.getColor(getMainViewColor()))
+
 
 
         setSupportActionBar(binding.toolbar)
 
+        // Sets up the navController
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
 
 
+        // Removes the toolbar from the fragment based on destination
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             val id = destination.id
             when (id) {
@@ -45,6 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    // Handles navigating by pressing the back button
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)

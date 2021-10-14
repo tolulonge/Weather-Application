@@ -7,6 +7,10 @@ import com.example.weatherapplication.R
 import java.text.SimpleDateFormat
 import java.util.*
 
+/**
+ * Returns an image denoting the time of the day, and also a greeting of Good morning, afternoon,
+ * night or evening
+ */
 fun getGreetingImage(): Int {
     val c = Calendar.getInstance()
 
@@ -19,12 +23,14 @@ fun getGreetingImage(): Int {
     }
 }
 
+// Returns a date format (MON 10 14, 2021)
 fun getCalendarDate(): String {
     val c = Calendar.getInstance()
     val dateFormat = SimpleDateFormat("EEE MM dd, yyyy", Locale.ROOT)
     return dateFormat.format(c.time)
 }
 
+// Returns a particular theme depending on the time of the day
 fun getApplicationTheme(): Int {
     val c = Calendar.getInstance()
 
@@ -37,6 +43,7 @@ fun getApplicationTheme(): Int {
     }
 }
 
+// Changes the background of the mainView also based on the time of the day
 fun getMainViewColor(): Int {
     val c = Calendar.getInstance()
 
@@ -50,6 +57,7 @@ fun getMainViewColor(): Int {
 }
 
 
+// Returns a gif to describe the current weather description
 fun getWeatherGifToLoad(weatherName: String): Int {
     return when (weatherName) {
         "Clouds" -> R.drawable.clouds_gif
@@ -62,7 +70,7 @@ fun getWeatherGifToLoad(weatherName: String): Int {
 
 }
 
-
+// This is an extension function to load the image of each cities coming from firebase
 fun ImageView.load(imageAddress: String, onClick: (() -> Unit)? = null) {
     val imageView = this
     Glide.with(this)

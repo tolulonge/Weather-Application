@@ -22,7 +22,8 @@ import com.google.android.material.transition.MaterialElevationScale
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * This fragment holds the view for the list of cities collected from the viewModel and employs the
+ * adapter to display it
  */
 @AndroidEntryPoint
 class CityListFragment : Fragment() {
@@ -50,6 +51,7 @@ class CityListFragment : Fragment() {
 
         binding.greetingImg.setImageResource(getGreetingImage())
 
+        // Handles the shared element transition between fragment
         sharedElementEnterTransition = MaterialContainerTransform().apply {
             // The drawing view is the id of the view above which the container transform
             // will play in z-space.
@@ -69,6 +71,7 @@ class CityListFragment : Fragment() {
     }
 
 
+    // observes the viewModel and updates the progress bar as required
     private fun observeViewModel(weatherAdapter: WeatherAdapter) {
         cityViewModel.cityDetails.observe(viewLifecycleOwner) {
             if (it.size >= CityData.listOfCityName.size) {

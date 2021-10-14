@@ -11,6 +11,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+/**
+ * This viewmodel classes exposes a livedata containing the list of cites and helps make the network
+ * call in a coroutine to retrieve the list of cities
+ */
 @HiltViewModel
 class CityViewModel @Inject constructor(private val cityRepository: CityRepository) : ViewModel() {
 

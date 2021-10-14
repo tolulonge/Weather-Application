@@ -1,6 +1,5 @@
 package com.example.weatherapplication.ui
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,12 @@ import com.example.weatherapplication.databinding.LayoutCityItemBinding
 import com.example.weatherapplication.model.data.City
 import com.example.weatherapplication.utils.load
 
+/**
+ * This is the adapter class that helps bind the data coming from the api into views that the user
+ * can see and interact with.
+ * It receives an arrayList of the cities and an implementation of the a listener to handle click
+ * events
+ */
 class WeatherAdapter(
     private var citiesData: ArrayList<City>,
     private val listener: ((view: View, city: City) -> Unit)? = null
